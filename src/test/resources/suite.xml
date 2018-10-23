@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" verbose="1">
+
+    <listeners>
+        <listener class-name="com.epam.yandexmail.listeners.MyTestListener"></listener>
+    </listeners>
+
+    <test name="Yandex mail tests">
+        <groups>
+
+            <run>
+                <include name="toDraft"></include>
+                <include name="fromDraft"></include>
+                <include name="actionsPractice"></include>
+            </run>
+
+            <dependencies>
+                <group name="toDraft" depends-on="fromDraft"/>
+                <group name="actionsPractice" depends-on="toDraft"/>
+            </dependencies>
+        </groups>
+
+        <packages>
+            <package name="com.epam.yandexmail.tests.*"></package>
+        </packages>
+    </test>
+</suite>

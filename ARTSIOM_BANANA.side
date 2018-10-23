@@ -1,0 +1,74 @@
+{
+  "id": "eeb5c0d1-9c55-4789-9c3b-68e174c98158",
+  "name": "ARTSIOM_BANANA",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "81a44a44-aa27-4122-a31d-ff2bec47ae5a",
+    "name": "ARTSIOM_BANANA",
+    "commands": [{
+      "id": "84015976-5de1-4579-82b9-24b1b50d8fd5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "value": ""
+    }, {
+      "id": "404bffe2-9015-4d6c-91df-a6abb498066e",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=lst-ib",
+      "value": "118,8"
+    }, {
+      "id": "708e3fe8-db18-4d16-9eac-1eeb3b8925cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=lst-ib",
+      "value": "banana song"
+    }, {
+      "id": "a1e6f7ea-d316-474f-81e1-092f8a649c05",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=lst-ib",
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "43f1e4d5-a9e3-414e-933b-0d5574755576",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div.rc > h3.r > a",
+      "value": "Despicable Me 2 | Minions Banana Song (2013) SNSD TTS - YouTube"
+    }, {
+      "id": "ebdccd84-f8dc-4737-af19-0998c4c93f89",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=div.rc > h3.r > a",
+      "value": "206,7"
+    }, {
+      "id": "2a63ac11-c466-45b5-abca-34a53d4f7fab",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=button.ytp-play-button.ytp-button",
+      "value": "30,23"
+    }, {
+      "id": "b30102a4-963d-4b37-8c01-77522d37bb6a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Despicable Me 2 | Minions Banana Song (2013) SNSD TTS - YouTube",
+      "value": "youtube"
+    }, {
+      "id": "34d9395e-3e50-4883-a715-133c7498155f",
+      "comment": "",
+      "command": "assertText",
+      "target": "//div[@id='count']/yt-view-count-renderer/span",
+      "value": "([5-9][0-9,]{9,})+( views)"
+    }]
+  }],
+  "suites": [{
+    "id": "7d5065c3-c829-402d-9ae2-e410572e450f",
+    "name": "Default Suite",
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["81a44a44-aa27-4122-a31d-ff2bec47ae5a"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": [],
+  "version": "1.0"
+}
